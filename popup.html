@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Parrot</title>
+  <link rel="stylesheet" href="css/popup.css">
+  <!-- Add D3.js for data visualization -->
+  <script src="lib/d3.v7.min.js"></script>
+</head>
+<body>
+  <div class="header">
+    <img src="icons/icon48.png" alt="Privacy Parrot Logo">
+    <h1>Privacy Parrot</h1>
+    <div class="risk-indicator" id="risk-level">⌛</div>
+  </div>
+
+  <div class="main-content">
+    <div id="loading-message">
+      <div class="loading-spinner"></div>
+      Analyzing page privacy practices...
+    </div>
+    
+    <div id="results-container" style="display: none;">
+      <div class="summary-section">
+        <h2><span class="icon">🔍</span> What They Want</h2>
+        <div id="data-collection-container"></div>
+      </div>
+  
+      <div class="summary-section">
+        <h2><span class="icon">👁️</span> Tracking You With</h2>
+        <div id="tracking-container"></div>
+      </div>
+  
+      <hr class="divider">
+  
+      <div class="bottom-line">
+        <div class="bottom-line-title">Bottom Line:</div>
+        <div id="bottom-line-text"></div>
+      </div>
+  
+      <div class="action-buttons">
+        <button class="protection-tips" id="show-tips-btn">
+          <span class="button-icon">🛡️</span>
+          Protection Tips
+        </button>
+        <button class="details" id="show-details-btn">
+          <span class="button-icon">🔍</span>
+          Technical Details
+        </button>
+        <button class="data-flow" id="show-flow-btn">
+          <span class="button-icon">🌐</span>
+          Data Flow Map
+        </button>
+      </div>
+  
+      <div class="details-section" id="protection-tips">
+        <h3>Protection Tips</h3>
+        <div id="tips-container"></div>
+      </div>
+  
+      <div class="details-section" id="technical-details">
+        <h3>Technical Details</h3>
+        <div id="tech-details-container"></div>
+      </div>
+      
+      <div class="details-section" id="data-flow-map">
+        <h3>Data Flow Map</h3>
+        <div id="data-flow-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/popup.js"></script>
+</body>
+</html> 
